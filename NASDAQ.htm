@@ -1,0 +1,51 @@
+﻿<html>
+<body>
+<div id="element1">
+</div>
+
+<script language="javascript">
+const stockcode = ["AAPL.US","MSFT.US","AMZN.US","TSLA.US","GOOG.US","GOOGL.US","NVDA.US","FB.US","ADBE.US","AVGO.US","PEP.US","CSCO.US","COST.US","CMCSA.US","QCOM.US","INTC.US","NFLX.US","TXN.US","INTU.US","TMUS.US","AMD.US","PYPL.US","HON.US","AMGN.US","AMAT.US","SBUX.US","CHTR.US","ISRG.US","BKNG.US","MDLZ.US","MU.US","ADP.US","ADI.US","LRCX.US","GILD.US","CSX.US","FISV.US","MRNA.US","REGN.US","ATVI.US","VRTX.US","MRVL.US","KLAC.US","ILMN.US","JD.US","KDP.US","ABNB.US","ADSK.US","MAR.US","ASML.US","NXPI.US","MELI.US","XLNX.US","FTNT.US","PANW.US","SNPS.US","WDAY.US","CTSH.US","LCID.US","TEAM.US","AEP.US","IDXX.US","MNST.US","ORLY.US","PAYX.US","EXC.US","KHC.US","WBA.US","LULU.US","CDNS.US","DXCM.US","MCHP.US","CTAS.US","EA.US","DDOG.US","ALGN.US","BIDU.US","EBAY.US","XEL.US","CRWD.US","ZS.US","ODFL.US","ZM.US","ROST.US","MTCH.US","PCAR.US","BIIB.US","VRSK.US","FAST.US","CPRT.US","DLTR.US","ANSS.US","NTES.US","OKTA.US","SIRI.US","SGEN.US","VRSN.US","DOCU.US","PDD.US","SWKS.US","SPLK.US","CEG.US"];
+
+const stockname = 
+["Apple Inc","Microsoft Corp","Amazon.com Inc","Tesla Inc","Alphabet Inc","Alphabet Inc","NVIDIA Corp","Meta Platforms Inc","Adobe Inc","Broadcom Inc","PepsiCo Inc","Cisco Systems Inc/Delaware","Costco Wholesale Corp","Comcast Corp","QUALCOMM Inc","Intel Corp","Netflix Inc","Texas Instruments Inc","Intuit Inc","T-Mobile US Inc","Advanced Micro Devices Inc","PayPal Holdings Inc","Honeywell International Inc","Amgen Inc","Applied Materials Inc","Starbucks Corp","Charter Communications Inc","Intuitive Surgical Inc","Booking Holdings Inc","Mondelez International Inc","Micron Technology Inc","Automatic Data Processing Inc","Analog Devices Inc","Lam Research Corp","Gilead Sciences Inc","CSX Corp","Fiserv Inc","Moderna Inc","Regeneron Pharmaceuticals Inc","Activision Blizzard Inc","Vertex Pharmaceuticals Inc","Marvell Technology Inc","KLA Corp","Illumina Inc","JD.com Inc ADR","Keurig Dr Pepper Inc","Airbnb Inc","Autodesk Inc","Marriott International Inc/MD","ASML Holding NV","NXP Semiconductors NV","MercadoLibre Inc","Xilinx Inc","Fortinet Inc","Palo Alto Networks Inc","Synopsys Inc","Workday Inc","Cognizant Technology Solutions Corp","Lucid Group Inc","Atlassian Corp PLC","American Electric Power Co Inc","IDEXX Laboratories Inc","Monster Beverage Corp","O'Reilly Automotive Inc","Paychex Inc","Exelon Corp","Kraft Heinz Co/The","Walgreens Boots Alliance Inc","Lululemon Athletica Inc","Cadence Design Systems Inc","Dexcom Inc","Microchip Technology Inc","Cintas Corp","Electronic Arts Inc","Datadog Inc","Align Technology Inc","Baidu Inc ADR","eBay Inc","Xcel Energy Inc","Crowdstrike Holdings Inc","Zscaler Inc","Old Dominion Freight Line Inc","Zoom Video Communications Inc","Ross Stores Inc","Match Group Inc","PACCAR Inc","Biogen Inc","Verisk Analytics Inc","Fastenal Co","Copart Inc","Dollar Tree Inc","ANSYS Inc","NetEase Inc ADR","Okta Inc","Sirius XM Holdings Inc","Seagen Inc","VeriSign Inc","DocuSign Inc","Pinduoduo Inc ADR","Skyworks Solutions Inc","Splunk Inc","Constellation Energy Corp"];
+
+
+stocktemplate = '';
+
+for (var i = 0; i < stockcode.length; i++){
+
+stocktemplate = stocktemplate.concat('<div style=\"display:flex;width:100%\">') 
+.concat('<div style=\"flex:50%;padding:2px;\">')
+.concat(stockname[i])
+.concat('<br>')
+.concat('<img style=\"width:100%;object-fit:contain\"') 
+.concat('src="http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&titlestyle=1&lang=0&vol=1&stockid=') 
+.concat(stockcode[i])
+.concat('&period=14&type=1&com=70005&scheme=3&chartwidth=870&chartheight=855&Indicator=9&indpara1=20&')
+.concat('indpara2=2&indpara3=&indpara4=&indpara5=&subChart1=2&ref1para1=14&ref1para2=0&ref1para3=0&')
+.concat('subChart2=3&ref2para1=12&ref2para2=26&ref2para3=9&subChart3=12&')
+.concat('ref3para1=0&ref3para2=0&ref3para3=0&logoStyle=1&u=13\" /></div>')
+.concat('<div style=\"flex:50%;padding:5px;\">');
+
+i++;
+
+stocktemplate = stocktemplate.concat(stockname[i])
+.concat('<br>')
+
+.concat('<img style=\"width:100%;object-fit:contain\"') 
+.concat('src="http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&titlestyle=1&lang=0&vol=1&stockid=') 
+.concat(stockcode[i])
+.concat('&period=14&type=1&com=70005&scheme=3&chartwidth=870&chartheight=855&Indicator=9&indpara1=20&')
+.concat('indpara2=2&indpara3=&indpara4=&indpara5=&subChart1=2&ref1para1=14&ref1para2=0&ref1para3=0&')
+.concat('subChart2=3&ref2para1=12&ref2para2=26&ref2para3=9&subChart3=12&')
+.concat('ref3para1=0&ref3para2=0&ref3para3=0&logoStyle=1&u=13\" /></div></div>');
+
+}
+
+strMessage1 = document.getElementById("element1") ;
+strMessage1.innerHTML = stocktemplate;
+</script>
+
+
+</body>
+</html>

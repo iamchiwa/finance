@@ -1,0 +1,51 @@
+﻿<html>
+<body>
+<div id="element1">
+</div>
+
+<script language="javascript">
+const stockcode = ["UNH.US","HD.US","GS.US","MSFT.US","MCD.US","V.US","AMGN.US","CRM.US","BA.US","CAT.US","HON.US","AXP.US","AAPL.US","JNJ.US","TRV.US","MMM.US","PG.US","JPM.US","NKE.US","WMT.US","DIS.US","IBM.US","CVX.US","MRK.US","KO.US","DOW.US","CSCO.US","VZ.US","WBA.US","INTC.US"];
+
+const stockname = 
+["UnitedHealth Group Incorporated","Home Depot Inc.","Goldman Sachs Group Inc.","Microsoft Corporation","McDonald's Corporation","Visa Inc. Class A","Amgen Inc.","salesforce.com inc.","Boeing Company","Caterpillar Inc.","Honeywell International Inc.","American Express Company","Apple Inc.","Johnson & Johnson","Travelers Companies Inc.","3M Company","Procter & Gamble Company","JPMorgan Chase & Co.","NIKE Inc. Class B","Walmart Inc.","Walt Disney Company","International Business Machines Corporation","Chevron Corporation","Merck & Co. Inc.","Coca-Cola Company","Dow Inc.","Cisco Systems Inc.","Verizon Communications Inc.","Walgreens Boots Alliance Inc","Intel Corporation"];
+
+
+stocktemplate = '';
+
+for (var i = 0; i < stockcode.length; i++){
+
+stocktemplate = stocktemplate.concat('<div style=\"display:flex;width:100%\">') 
+.concat('<div style=\"flex:50%;padding:2px;\">')
+.concat(stockname[i])
+.concat('<br>')
+.concat('<img style=\"width:100%;object-fit:contain\"') 
+.concat('src="http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&titlestyle=1&lang=0&vol=1&stockid=') 
+.concat(stockcode[i])
+.concat('&period=6&type=1&com=70005&scheme=3&chartwidth=870&chartheight=855&Indicator=9&indpara1=20&')
+.concat('indpara2=2&indpara3=&indpara4=&indpara5=&subChart1=2&ref1para1=14&ref1para2=0&ref1para3=0&')
+.concat('subChart2=3&ref2para1=12&ref2para2=26&ref2para3=9&subChart3=12&')
+.concat('ref3para1=0&ref3para2=0&ref3para3=0&logoStyle=1&u=13&t=20220206001218&d=76FE212E\" /></div>')
+.concat('<div style=\"flex:50%;padding:5px;\">');
+
+i++;
+
+stocktemplate = stocktemplate.concat(stockname[i])
+.concat('<br>')
+
+.concat('<img style=\"width:100%;object-fit:contain\"') 
+.concat('src="http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&titlestyle=1&lang=0&vol=1&stockid=') 
+.concat(stockcode[i])
+.concat('&period=6&type=1&com=70005&scheme=3&chartwidth=870&chartheight=855&Indicator=9&indpara1=20&')
+.concat('indpara2=2&indpara3=&indpara4=&indpara5=&subChart1=2&ref1para1=14&ref1para2=0&ref1para3=0&')
+.concat('subChart2=3&ref2para1=12&ref2para2=26&ref2para3=9&subChart3=12&')
+.concat('ref3para1=0&ref3para2=0&ref3para3=0&logoStyle=1&u=13&t=20220206001218&d=76FE212E\" /></div></div>');
+
+}
+
+strMessage1 = document.getElementById("element1") ;
+strMessage1.innerHTML = stocktemplate;
+</script>
+
+
+</body>
+</html>
